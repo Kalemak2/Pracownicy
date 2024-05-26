@@ -52,5 +52,7 @@ Usuwanie notatek o pracownikach
 
 
 Środowisko programistyczne: Visual Studio 2022
+
 System operacyjny: Windows 10
+
 Język programowania: C#

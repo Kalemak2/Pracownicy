@@ -49,3 +49,8 @@ Usuwanie notatek o pracownikach
 
 
 ![image](https://github.com/Kalemak2/Pracownicy/assets/152185330/6dd315dd-fdcb-4714-b164-f2505bf79fec)
+
+
+Środowisko programistyczne: Visual Studio 2022
+System operacyjny: Windows 10
+Język programowania: C#

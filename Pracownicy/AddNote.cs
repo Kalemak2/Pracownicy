@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace Pracownicy
 {
-    internal class DeleteWorkers
+    internal class AddNote
     {
-        public DeleteWorkers(MySqlConnection conn) {
+        public AddNote(MySqlConnection conn) {
+
             new ShowWorkers(conn);
 
-            Console.Write("Podaj ID pracownika do usunięcia: ");
+            Console.Write("\nPodaj treść notatki: ");
+            string content = Console.ReadLine();
+            Console.Write("Podaj id pracownika: ");
             if (int.TryParse(Console.ReadLine(), out int id))
             {
                 conn.Open();
@@ -25,22 +28,20 @@ namespace Pracownicy
 
                 if (workerCount > 0)
                 {
-                    string querynotes = $"DELETE FROM note WHERE id_worker = {id}";
-                    MySqlCommand insertNoteCmd = new MySqlCommand(querynotes, conn);
+                    query = "INSERT INTO notes(id_worker, content) VALUES (@id_worker, @content)";
+                    MySqlCommand insertNoteCmd = new MySqlCommand(query, conn);
+                    insertNoteCmd.Parameters.AddWithValue("@content", content);
+                    insertNoteCmd.Parameters.AddWithValue("@id_worker", id);
                     insertNoteCmd.ExecuteNonQuery();
 
-                    string queryworkers = $"DELETE FROM workers WHERE id_worker = {id}";
-                    MySqlCommand insertWorkerCmd = new MySqlCommand(queryworkers, conn);
-                    insertWorkerCmd.ExecuteNonQuery();
-
-
-
-                    Console.WriteLine("Pracownik został pomyślnie usunięty!");
+                    Console.WriteLine("Notatka została dodana pomyślnie!");
                 }
                 else
                 {
                     Console.WriteLine("Pracownik o podanym ID nie istnieje!");
                 }
+
+
                 conn.Close();
             }
             else

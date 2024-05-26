@@ -16,7 +16,7 @@ namespace Pracownicy
                 "Dodaj nowego pracownika",
                 "Wyświetl pracowników",
                 "Usuń pracownika",
-                "Wyświetl pracownika",
+                "Wyświetl szczegółowe informacje o pracowniku",
                 "Wyświetl stanowiska w firmie",
                 "Edytuj hasło pracownika",
                 "Dodaj notatki o pracownikach",
@@ -29,7 +29,7 @@ namespace Pracownicy
                 Console.WriteLine($"{number++}. {option}");
             }
 
-            Console.Write("Twój wybór:");
+            Console.Write("Twój wybór: ");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -47,12 +47,26 @@ namespace Pracownicy
                     new DeleteWorkers(conn);
                     break;
                 case "4":
+                    Console.Clear();
+                    new ShowWorkerInfo(conn);
                     break;
                 case "5":
+                    Console.Clear();
+                    new ShowPosition(conn);
                     break;
                 case "6":
+                    Console.Clear();
+                    new ChangePassword(conn);
                     break;
                 case "7":
+                    Console.Clear();
+                    new AddNote(conn);
+                    break;
+                case "8":
+                    Console.Clear();
+                    new ShowNotes(conn);
+                    break;
+                case "9":
                     break;
                 default:
                     Console.WriteLine("Nie ma takiej opcji!");

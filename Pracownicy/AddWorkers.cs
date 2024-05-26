@@ -30,7 +30,7 @@ namespace Pracownicy
                 "Administrator",
                 "Rekruter",
                 "Programista",
-                "H4",
+                "HR",
             };
 
             int number = 1;

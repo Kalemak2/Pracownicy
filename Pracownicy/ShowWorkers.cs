@@ -19,7 +19,7 @@ namespace Pracownicy
 
             while (reader.Read())
             {
-                Console.Write($"{reader["id_worker"]}. {reader["name"]} {reader["surname"]} / {reader["role_name"]} \n");
+                Console.WriteLine($"{reader["id_worker"]}. {reader["name"]} {reader["surname"]} / {reader["role_name"]}");
             }
 
             conn.Close();

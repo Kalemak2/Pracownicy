@@ -9,6 +9,12 @@ namespace Pracownicy
 {
     internal class AddWorkers
     {
+        /*******************************************************  
+        * nazwa klasy:          AddWorkers
+        * parametry wejściowe:  conn - połączenie z bazą danych
+        * opis:                 Klasa umożliwia dodawanie pracowników do bazy danych.
+        * autor:                Kornel Pakulski
+        * ******************************************************/
         public AddWorkers(MySqlConnection conn) {
 
             Console.Write("Podaj imie: ");

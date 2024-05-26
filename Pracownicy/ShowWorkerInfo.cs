@@ -11,6 +11,13 @@ namespace Pracownicy
 {
     internal class ShowWorkerInfo
     {
+        /*******************************************************  
+        * nazwa klasy:          ShowWorkerInfo
+        * parametry wejściowe:  conn - połączenie z bazą danych
+        * opis:                 Klasa wyświetla szczegółowe informacje
+        *                       pracowników.
+        * autor:                Kornel Pakulski
+        * ******************************************************/
         public ShowWorkerInfo(MySqlConnection conn) {
             new ShowWorkers(conn);
 

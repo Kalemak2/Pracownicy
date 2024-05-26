@@ -11,6 +11,12 @@ namespace Pracownicy
 {
     internal class ChangePassword
     {
+        /*******************************************************  
+        * nazwa klasy:          ChangePassword
+        * parametry wejściowe:  conn - połączenie z bazą danych
+        * opis:                 Klasa umożliwia zmiane hasła pracowników.
+        * autor:                Kornel Pakulski
+        * ******************************************************/
         public ChangePassword(MySqlConnection conn)
         {
             new ShowWorkers(conn);

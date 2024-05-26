@@ -9,6 +9,12 @@ namespace Pracownicy
 {
     internal class DeleteNotes
     {
+        /*******************************************************  
+         * nazwa klasy:          DeleteNotes
+         * parametry wejściowe:  conn - połączenie z bazą danych
+         * opis:                 Klasa umożliwia usunięcie notatki z bazy danych.
+         * autor:                Kornel Pakulski
+         * ******************************************************/
         public DeleteNotes(MySqlConnection conn) { 
             new ShowNotes(conn);
 
@@ -20,10 +26,10 @@ namespace Pracownicy
 
                 string query = $"SELECT COUNT(*) FROM note WHERE id_note = @id_note";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id_worker", id);
-                int workerCount = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.Parameters.AddWithValue("@id_note", id);
+                int noteCount = Convert.ToInt32(cmd.ExecuteScalar());
 
-                if (workerCount > 0)
+                if (noteCount > 0)
                 {
                     string querynotes = $"DELETE FROM note WHERE id_note = {id}";
                     MySqlCommand insertNoteCmd = new MySqlCommand(querynotes, conn);

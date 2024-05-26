@@ -9,6 +9,13 @@ namespace Pracownicy
 {
     internal class Menu
     {
+        /*******************************************************  
+         * nazwa klasy:          Menu
+         * parametry wejściowe:  conn - połączenie z bazą danych
+         * opis:                 Klasa wyświetla menu główne z opcjami do wyboru.
+         * autor:                Kornel Pakulski
+         * ******************************************************/
+
         public Menu(MySqlConnection conn) {
             Console.WriteLine("Witaj w aplikacji do zarządzania pracownikami!");
 
@@ -21,7 +28,7 @@ namespace Pracownicy
                 "Edytuj hasło pracownika",
                 "Dodaj notatki o pracownikach",
                 "Wyświetl notatki o pracownikach",
-                "Edytuj notatki o pracownikach"
+                "Usuń notatki o pracownikach"
             };
             int number = 1;
            foreach(string option in options)
@@ -67,6 +74,8 @@ namespace Pracownicy
                     new ShowNotes(conn);
                     break;
                 case "9":
+                    Console.Clear();
+                    new DeleteNotes(conn);
                     break;
                 default:
                     Console.WriteLine("Nie ma takiej opcji!");

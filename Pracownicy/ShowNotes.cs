@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace Pracownicy
 {
+    /*******************************************************  
+     * nazwa klasy:          ShowNotes
+     * parametry wejściowe:  conn - połączenie z bazą danych
+     * opis:                 Klasa wyświetla wszystkie dodane notatki.
+     * autor:                Kornel Pakulski
+     * ******************************************************/
     internal class ShowNotes
     {
         public ShowNotes(MySqlConnection conn) {

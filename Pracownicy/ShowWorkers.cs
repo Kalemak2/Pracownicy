@@ -8,7 +8,14 @@ using System.Threading.Tasks;
 namespace Pracownicy
 {
     internal class ShowWorkers
-    {     
+    {
+        /*******************************************************  
+        * nazwa klasy:          ShowWorkers
+        * parametry wejściowe:  conn - połączenie z bazą danych
+        * opis:                 Klasa wyświetla listę pracowników 
+        *                       wraz z ich stanowiskami
+        * autor:                Kornel Pakulski
+        * ******************************************************/
         public ShowWorkers(MySqlConnection conn) {
 
             string query = "SELECT workers.id_worker, workers.name, workers.surname, workers.id_role, role.role_name FROM workers INNER JOIN role ON workers.id_role = role.id_role";

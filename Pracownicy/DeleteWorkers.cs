@@ -10,6 +10,12 @@ namespace Pracownicy
 {
     internal class DeleteWorkers
     {
+        /*******************************************************  
+         * nazwa klasy:          DeleteNotes
+         * parametry wejściowe:  conn - połączenie z bazą danych
+         * opis:                 Klasa umożliwia usunięcie pracownika z bazy danych.
+         * autor:                Kornel Pakulski
+         * ******************************************************/
         public DeleteWorkers(MySqlConnection conn) {
             new ShowWorkers(conn);
 

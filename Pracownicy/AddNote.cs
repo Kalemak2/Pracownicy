@@ -10,6 +10,12 @@ namespace Pracownicy
 {
     internal class AddNote
     {
+        /*******************************************************  
+         * nazwa klasy:          AddNote
+         * parametry wejściowe:  conn - połączenie z bazą danych
+         * opis:                 Klasa umożliwia dodawanie notatek do bazy danych.
+         * autor:                Kornel Pakulski
+         * ******************************************************/
         public AddNote(MySqlConnection conn) {
 
             new ShowWorkers(conn);
